@@ -1,0 +1,4 @@
+https://docs.blackfin.uclinux.org/doku.php?id=toolchain:bare_metal:compile 
+
+
+bfin-elf-gcc -mcpu=bf533-0.3 -g test.c
