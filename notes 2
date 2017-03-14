@@ -1,0 +1,143 @@
+	29		//fract_test3 = add_fr1x16(fract_test1, fract_test2);
+	30		//complex_3 = cadd_fr16(complex_1, complex_2);
+	31		complex_3 = cmlt_fr16(complex_1, complex_rotate);
+	0x2da	<main+190>:		R0 = [FP -0x24];
+-	0x2dc	<main+192>:		[FP -0x3c] = R0;
+-	0x2de	<main+194>:		R0 = [FP -0x2c];
+-	0x2e0	<main+196>:		[FP -0x38] = R0;
+-	0x336	<main+282>:		[FP -0x30] = R0;
+	32		fract_test1 = fract_test1 * 2;
+
+
+
+	29		//fract_test3 = add_fr1x16(fract_test1, fract_test2);
+	30		//complex_3 = cadd_fr16(complex_1, complex_2);
+	31		complex_3 = cmlt_fr16(complex_1, complex_rotate);
+	0x250	<main+52>:		R0 = [FP -0x8];
+-	0x252	<main+54>:		[FP -0x1c] = R0;
+-	0x254	<main+56>:		R0 = [FP -0x10];
+-	0x256	<main+58>:		[FP -0x18] = R0;
+-	0x2ac	<main+144>:		[FP -0x14] = R0;
+	32		//fract_test1 = fract_test1 * 2;
+	33		
+	34		//short *integer = &fract_test1;
+	35		
+
+
+-	0x258	<main+60>:		R2 = [FP -0x2c];
+-	0x25a	<main+62>:		[FP -0x1c] = R2;
+	0x25c	<main+64>:		R0 = 0xfeed (Z);		/*		R0=0x0xfeed(65261) */
+-	0x260	<main+68>:		[FP -0xc] = R0;
+	0x262	<main+70>:		R0 = [FP -0x10];										pc = 610
+-	0x264	<main+72>:		[FP -0x24] = R0;
+-	0x266	<main+74>:		R0 = [FP -0x18];
+-	0x268	<main+76>:		[FP -0x20] = R0;
+-	0x26a	<main+78>:		R0 = W[FP + -0x22] (X);
+-	0x26e	<main+82>:		R1 = R0.L (X);
+-	0x270	<main+84>:		R0 = W[FP + -0x24] (X);
+-	0x274	<main+88>:		R0 = R0.L (X);
+-	0x276	<main+90>:		R1.H = R1.L << 0x0;
+-	0x27a	<main+94>:		R1.L = R0.L << 0x0;
+-	0x27e	<main+98>:		R0 = W[FP + -0x1e] (X);
+-	0x282	<main+102>:		R2 = R0.L (X);
+-	0x284	<main+104>:		R0 = W[FP + -0x20] (X);
+-	0x288	<main+108>:		R0 = R0.L (X);
+-	0x28a	<main+110>:		R0.H = R2.L << 0x0;
+-	0x28e	<main+114>:		R0.L = R0.L << 0x0;
+-	0x292	<main+118>:		A1 = R1.L * R0.H, A0 = R1.L * R0.L (W32);
+-	0x296	<main+122>:		R2 = A0.W;
+-	0x298	<main+124>:		[FP -0x3c] = R2;
+-	0x29a	<main+126>:		R2 = A0.X;
+-	0x29c	<main+128>:		[FP -0x38] = R2;
+-	0x29e	<main+130>:		R2 = [FP -0x3c];
+-	0x2a0	<main+132>:		A0.W = R2;
+-	0x2a2	<main+134>:		R2 = [FP -0x38];
+-	0x2a4	<main+136>:		A0.X = R2;
+-	0x2a6	<main+138>:		R0.H = (A1 += R1.H * R0.L), R0.L = (A0 -= R1.H * R0.H);
+-	0x2aa	<main+142>:		[FP -0x4] = R0;
+-	0x2ac	<main+144>:		R0 = [FP -0x4];
+-	0x2ae	<main+146>:		W[FP + -0x28] = R0;
+-	0x2b2	<main+150>:		R0 = [FP -0x4];
+-	0x2b4	<main+152>:		R0.L = R0.H << 0x0;
+-	0x2b8	<main+156>:		W[FP + -0x26] = R0;
+-	0x2bc	<main+160>:		R0 = [FP -0x28];
+-	0x2be	<main+162>:		[FP -0x1c] = R0;
+-	0x2c0	<main+164>:		R0 = 0xbeef (Z);		/*		R0=0x0xbeef(48879) */					pc = 704
+-	0x2c4	<main+168>:		[FP -0x8] = R0;
+-	0x2c6	<main+170>:		R0 = 0x0 (X);		/*		R0=0x0(  0) */
+-	0x2c8	<main+172>:		UNLINK;
+-	0x2cc	<main+176>:		RTS;
+
+
+
+// optimization -O3
+
+	0x256	<main+58>:		[FP -0x2c] = R0;
+-	0x258	<main+60>:		R2 = [FP -0x2c];
+-	0x25a	<main+62>:		[FP -0x1c] = R2;
+	0x25c	<main+64>:		R0 = 0xfeed (Z);		/*		R0=0x0xfeed(65261) */
+-	0x260	<main+68>:		[FP -0xc] = R0;
+	0x262	<main+70>:		R0 = [FP -0x10];
+-	0x264	<main+72>:		[FP -0x24] = R0;
+-	0x266	<main+74>:		R0 = [FP -0x18];
+-	0x268	<main+76>:		[FP -0x20] = R0;
+-	0x26a	<main+78>:		R0 = W[FP + -0x22] (X);
+-	0x26e	<main+82>:		R1 = R0.L (X);
+-	0x270	<main+84>:		R0 = W[FP + -0x24] (X);
+-	0x274	<main+88>:		R0 = R0.L (X);
+-	0x276	<main+90>:		R1.H = R1.L << 0x0;
+-	0x27a	<main+94>:		R1.L = R0.L << 0x0;
+-	0x27e	<main+98>:		R0 = W[FP + -0x1e] (X);
+-	0x282	<main+102>:		R2 = R0.L (X);
+-	0x284	<main+104>:		R0 = W[FP + -0x20] (X);
+-	0x288	<main+108>:		R0 = R0.L (X);
+-	0x28a	<main+110>:		R0.H = R2.L << 0x0;
+-	0x28e	<main+114>:		R0.L = R0.L << 0x0;
+-	0x292	<main+118>:		A1 = R1.L * R0.H, A0 = R1.L * R0.L (W32);
+-	0x296	<main+122>:		R2 = A0.W;
+-	0x298	<main+124>:		[FP -0x3c] = R2;
+-	0x29a	<main+126>:		R2 = A0.X;
+-	0x29c	<main+128>:		[FP -0x38] = R2;
+-	0x29e	<main+130>:		R2 = [FP -0x3c];
+-	0x2a0	<main+132>:		A0.W = R2;
+-	0x2a2	<main+134>:		R2 = [FP -0x38];
+-	0x2a4	<main+136>:		A0.X = R2;
+-	0x2a6	<main+138>:		R0.H = (A1 += R1.H * R0.L), R0.L = (A0 -= R1.H * R0.H);
+-	0x2aa	<main+142>:		[FP -0x4] = R0;
+-	0x2ac	<main+144>:		R0 = [FP -0x4];
+-	0x2ae	<main+146>:		W[FP + -0x28] = R0;
+-	0x2b2	<main+150>:		R0 = [FP -0x4];
+-	0x2b4	<main+152>:		R0.L = R0.H << 0x0;
+-	0x2b8	<main+156>:		W[FP + -0x26] = R0;
+-	0x2bc	<main+160>:		R0 = [FP -0x28];
+-	0x2be	<main+162>:		[FP -0x1c] = R0;
+-	0x2c0	<main+164>:		R0 = 0xbeef (Z);		/*		R0=0x0xbeef(48879) */
+	0x2c4	<main+168>:		[FP -0x8] = R0;
+-	0x2c6	<main+170>:		R0 = 0x0 (X);		/*		R0=0x0(  0) */
+-	0x2c8	<main+172>:		UNLINK;
+-	0x2cc	<main+176>:		RTS;
+
+
+
+// floats
+
+36		//complex_3 = cadd_fr16(complex_1, complex_2);
+	37		unsigned int debug_start = 0xFEED;
+	0x422	<main+518>:		R0 = 0xfeed (Z);		/*		R0=0x0xfeed(65261) */
+-	0x426	<main+522>:		[FP -0x28] = R0;
+	38		//complex_3 = cmlt_fr16(complex_1, complex_rotate);
+	39		complex_float_3 = cmltf(complex_float_1, complex_float_rotate);
+	0x428	<main+524>:		R0 = [FP -0x40];									pc = 1064
+-	0x42a	<main+526>:		R1 = [FP -0x3c];
+-	0x42c	<main+528>:		[FP -0x68] = R0;
+-	0x42e	<main+530>:		[FP -0x64] = R1;
+-	0x430	<main+532>:		R0 = [FP -0x4c];
+-	0x432	<main+534>:		R1 = [FP -0x48];
+-	0x434	<main+536>:		[FP -0x60] = R0;
+-	0x436	<main+538>:		[FP -0x5c] = R1;
+-	0x474	<main+600>:		[FP -0x58] = R0;
+-	0x476	<main+602>:		[FP -0x54] = R1;
+	40		unsigned int debug_end = 0xBEEF;
+-	0x478	<main+604>:		R0 = 0xbeef (Z);		/*		R0=0x0xbeef(48879) */	pc = 1144
+-	0x47c	<main+608>:		[FP -0x24] = R0;
+	41		//fract_test1 = fract_test1 * 2;
