@@ -18,9 +18,6 @@
 
 
 #define GRAD_2_RAD (M_PI / 180)
-//#define ALPHA (45 * GRAD_2_RAD)
-//#define ALPHA (PI / 4)
-
 #define POST_COMMA_BITS 5
 #define POST_COMMA_BITMASK 0x1F
 
@@ -89,6 +86,4 @@ complex_float float_transform(complex_float vect, complex_float translation, com
 {
 	return cmltf(csubf(vect, translation), rotation);
 }
-
-
 
